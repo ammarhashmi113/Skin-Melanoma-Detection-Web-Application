@@ -13,7 +13,7 @@ This project implements a web application for detecting skin melanoma using deep
 - `Skin Melanoma Detection:` Users can access the skin melanoma detection feature by visiting the prediction page (`/efficientnet`). They can upload an image of a skin lesion and receive predictions about whether the lesion is indicative of melanoma.
 - `Prediction Result:` After uploading an image, users are redirected to the prediction result page (`/prediction_result`), where they can view the prediction outcome.
 
-# Project Structure:
+# Project Structure
 - `app.py:` The main Flask application file containing routes and logic for the web application.
 - `templates/:` This directory contains HTML templates for different pages of the web application.
 - `models/:` Trained deep learning `EfficientNetB0` model for skin melanoma detection.
