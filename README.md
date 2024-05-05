@@ -9,7 +9,7 @@ This project implements a web application for detecting skin melanoma using deep
 
 # Usage
 - `Home Page:` The home page (`/`) provides a simple interface for users to navigate to other sections of the application.
-- `About Page:`The about page (`/about`) provides information about the project and its objectives.
+- `About Page:`The about page `(/about)` provides information about the project and its objectives.
 - `Skin Melanoma Detection:` Users can access the skin melanoma detection feature by visiting the prediction page (`/efficientnet`). They can upload an image of a skin lesion and receive predictions about whether the lesion is indicative of melanoma.
 - `Prediction Result:` After uploading an image, users are redirected to the prediction result page (`/prediction_result`), where they can view the prediction outcome.
 
