@@ -1,0 +1,70 @@
+<!-- templates/landing.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkinSense+ A Skin lesion Predictor</title>
+    <!-- add icon link -->
+    <link rel="icon"
+        href="https://firebasestorage.googleapis.com/v0/b/skinmelanomadetection.appspot.com/o/images%2FSkinSenseLogo1.png?alt=media&token=987d0478-7fe7-4b9f-b880-dc018fc9541f">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background: url('https://bootdey.com/img/Content/bg1.jpg') no-repeat center center fixed;
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        h1 {
+            color: #343a40;
+        }
+
+        p {
+            color: #6c757d;
+        }
+
+        a {
+            margin: 10px;
+            padding: 10px 20px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #007bff;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1 style="color:white" class="display-4">Welcome to SkinSense+</h1>
+        <p class="lead">Choose an option below:</p>
+        <a class="btn btn-success" href="{{ url_for('login') }}">Login</a>
+        <a class="btn btn-primary" href="{{ url_for('signup') }}">Signup</a>
+    </div>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>

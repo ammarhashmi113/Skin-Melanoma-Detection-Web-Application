@@ -1,0 +1,170 @@
+<!-- templates/about.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About the Project</title>
+    <!-- add icon link -->
+    <link rel="icon"
+        href="https://firebasestorage.googleapis.com/v0/b/skinmelanomadetection.appspot.com/o/images%2FSkinSenseLogo1.png?alt=media&token=987d0478-7fe7-4b9f-b880-dc018fc9541f">
+
+    <!-- Add Bootstrap CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+
+        h1,
+        h2,
+        h3 {
+            color: #0366d6;
+        }
+
+        p {
+            color: #777;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ddd;
+            padding: 5px;
+            border-radius: 5px;
+            margin-top: 15px;
+        }
+
+        .section {
+            margin-top: 30px;
+        }
+
+        .subsection {
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body class="container">
+    <h1 class="mt-5 mb-4">About the Skin Melanoma Detection Project</h1>
+
+    <!-- Project Description -->
+    <section class="section">
+        <h2>Project Description</h2>
+        <p>
+            Skin cancer, including melanoma, is a significant health concern worldwide. Early detection is crucial for
+            improving treatment outcomes.
+        </p>
+        <p>
+            In this project, our goal is to develop a system that enhances the early detection of skin melanoma and
+            other types of skin lesions using deep learning and computer vision techniques. Skin melanoma is a type of
+            skin cancer that can be life-threatening if not diagnosed and treated promptly. The project aims to provide
+            an effective solution for dermatologists, healthcare professionals, and individuals to identify potential
+            skin melanoma through an intelligent system.
+        </p>
+        <p>
+            Our system employs a custom convolutional neural network (CNN) model designed for skin melanoma detection.
+            Users can upload skin images to the web application, which is then fed to the backend CNN model for
+            analysis. The model's predictions are presented to users through the web application interface, enabling
+            early detection and informed decision-making.
+        </p>
+        <p>
+            The significance of this project lies in its potential to aid medical professionals and individuals in
+            identifying potential skin melanoma at an early stage, thus improving the chances of successful treatment.
+            Early detection can make a substantial difference in patient outcomes. The developed system enhances skin
+            melanoma detection by harnessing the power of deep learning and making it accessible to users through a
+            user-friendly web application. This project serves as a valuable tool in the ongoing efforts to combat skin
+            melanoma effectively.
+        </p>
+    </section>
+
+    <!-- Other Skin Cancer Types -->
+    <section class="section">
+        <h2>Other Skin Cancer Types</h2>
+        <div class="subsection">
+            <p>
+                In addition to melanoma, our model is also capable of detecting two other types of skin cancer:
+            </p>
+            <ul>
+                <li>Basal Cell Carcinoma (BCC)</li>
+                <li>Squamous Cell Carcinoma (SCC)</li>
+            </ul>
+        </div>
+
+        <!-- Basal Cell Carcinoma (BCC) -->
+        <div class="subsection">
+            <h3>Basal Cell Carcinoma (BCC)</h3>
+            <p>
+                BCC is the most prevalent type of skin cancer and often appears on sun-exposed areas like the face,
+                neck, and scalp. It typically grows slowly and rarely spreads to other parts of the body.
+            </p>
+        </div>
+
+        <!-- Squamous Cell Carcinoma (SCC) -->
+        <div class="subsection">
+            <h3>Squamous Cell Carcinoma (SCC)</h3>
+            <p>
+                SCC is another common type of skin cancer that can grow more rapidly than BCC. It tends to develop in
+                sun-exposed areas and has a higher chance of spreading if left untreated.
+            </p>
+        </div>
+    </section>
+
+    <!-- Models Used -->
+    <section class="section">
+        <h2>Models Used</h2>
+        <p>
+            Our skin melanoma detection application utilizes two CNN models and their ensemble model for disease
+            prediction:
+        </p>
+        <ul>
+            <li>ResNet-50</li>
+            <li>EfficientNet-B0</li>
+            <li>Ensemble Model</li>
+        </ul>
+
+        <!-- ResNet-50 -->
+        <div class="subsection">
+            <h3>ResNet-50</h3>
+            <p>
+                ResNet stands for "Residual Network," and it is a type of convolutional neural network (CNN)
+                architecture that was introduced in the paper "Deep Residual Learning for Image Recognition" by Kaiming
+                He et al. in 2015. ResNet-50 is a specific variant of the ResNet architecture that consists of 50
+                layers. It has achieved state-of-the-art performance on various image classification benchmarks, such as
+                the ImageNet dataset.
+            </p>
+        </div>
+
+        <!-- EfficientNet-B0 -->
+        <div class="subsection">
+            <h3>EfficientNet-B0</h3>
+            <p>
+                EfficientNet is a family of CNN architectures introduced by Mingxing Tan and Quoc V. Le in the paper
+                "EfficientNet: Rethinking Model Scaling for Convolutional Neural Networks" in 2019. EfficientNet-B0 is
+                the base model in the EfficientNet family. It is designed to provide a good balance between model size
+                and accuracy. The "B0" in its name denotes the compound scaling coefficient for this specific variant.
+                EfficientNet models have been known for their efficiency in terms of both computational resources and
+                model size while achieving competitive performance on image classification tasks.
+            </p>
+        </div>
+
+        <!-- Ensemble Model -->
+        <div class="subsection">
+            <h3>Ensemble Model</h3>
+            <p>
+                The Ensemble Model in our skin melanoma detection application combines the strengths of EfficientNet-B0
+                and ResNet-50, using weighted averaging to create a robust and accurate system for early skin cancer
+                diagnosis, enhancing the chances of successful treatment.
+            </p>
+        </div>
+    </section>
+
+    <!-- Add Bootstrap JS and Popper.js scripts at the end of the body -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

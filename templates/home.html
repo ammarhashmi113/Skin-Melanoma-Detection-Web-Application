@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - SkinSense+</title>
+    <!-- add icon link -->
+    <link rel="icon"
+        href="https://firebasestorage.googleapis.com/v0/b/skinmelanomadetection.appspot.com/o/images%2FSkinSenseLogo1.png?alt=media&token=987d0478-7fe7-4b9f-b880-dc018fc9541f">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <style>
+        /* Additional custom styles */
+        body {
+            background-color: #f8f9fa;
+            color: #495057;
+        }
+
+        header {
+            background-color: #343a40;
+            color: #ffffff;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        section.container {
+            background-color: #ffffff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+        }
+
+        section.container h2 {
+            color: #343a40;
+        }
+
+        section.container a.btn-primary,
+        section.container a.btn-secondary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        section.container a.btn-primary:hover,
+        section.container a.btn-secondary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        section.explore-more {
+            background-color: #495057;
+        }
+
+        section.explore-more h2,
+        section.explore-more .btn-secondary {
+            color: #ffffff;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="bg-dark text-white text-center py-5 position-relative">
+        <h1>Welcome to SkinSense+</h1>
+        <p class="lead">Enhancing early detection of skin melanoma using deep learning and computer vision techniques
+        </p>
+        <button class="btn btn-light position-absolute" style="top: 10px; right: 10px;" type="button"
+            data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse" id="navbarToggle">
+            <div class="bg-dark p-4">
+                <a href="{{ url_for('signout') }}" class="text-white">Sign Out</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="container my-5">
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+                <div class="text-center mb-4">
+                    <h2 class="font-weight-bold text-primary">Unveiling Skin Health Insights</h2>
+                    <p class="lead text-muted">Skin cancer, especially melanoma, demands our attention globally.
+                        Detecting issues early can significantly improve treatment outcomes.</p>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="card border-0 bg-light mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title text-primary">Our Noble Mission</h5>
+                                <p class="card-text">Embark on a journey to create an intelligent system, utilizing deep
+                                    learning and computer vision, dedicated to early melanoma detection.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card border-0 bg-light mb-4">
+                            <div class="card-body">
+                                <h5 class="card-title text-warning">Targeting Impactful Audiences</h5>
+                                <p class="card-text">Our vision extends to empower dermatologists, healthcare
+                                    professionals, and individuals in identifying potential skin melanoma cases with
+                                    precision.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card border-0 bg-light">
+                    <div class="card-body">
+                        <h5 class="card-title text-info">Innovative Approach</h5>
+                        <p class="card-text">Leveraging cutting-edge Convolutional Neural Networks (CNN) models, such as
+                            EfficientNet-B0, Resnet50, and an Ensemble Model, uniquely crafted for precise skin melanoma
+                            detection.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="container text-center my-5 explore-more" style="background-color: #007bff; color: #ffffff;">
+        <h2 class="mb-4 font-weight-bold">Trained Models</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <a href="{{ url_for('efficientnet_prediction_route') }}"
+                    class="btn btn-light btn-lg btn-block">EfficientNet
+                    Prediction</a>
+            </div>
+            <div class="col-md-4">
+                <a href="{{ url_for('resnet_prediction_route') }}" class="btn btn-light btn-lg btn-block">ResNet
+                    Prediction</a>
+            </div>
+            <div class="col-md-4">
+                <a href="{{ url_for('ensemble_prediction_route') }}" class="btn btn-light btn-lg btn-block">Ensemble
+                    Model
+                    Prediction</a>
+            </div>
+            <div class="col-md-12 mt-3">
+                <a href="{{ url_for('about') }}" class="btn btn-secondary btn-lg btn-block">About Project</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2023 SkinSense+</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
