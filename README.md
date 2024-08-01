@@ -1,7 +1,7 @@
 # Skin-Melanoma-Detection-Web-Application
-A skin cancer classification system developed using Convolutional Neural Networks (CNNs)
+A skin melanoma detection web app developed using Python's Flask framework.
 
-This project implements a web application for detecting skin melanoma using deep learning techniques. The application allows users to upload images of skin lesions and receive predictions about whether the lesion is indicative of melanoma.
+This project implements a web application for detecting skin melanoma using ML. The application allows users to upload images of skin lesions and receive predictions about whether the lesion is indicative of melanoma.
 
 # Setup Instructions
 1. `Install Dependencies:` Make sure you have Python installed on your system. You'll also need to install Flask and TensorFlow. You can install them using pip.
